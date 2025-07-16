@@ -19,3 +19,9 @@ print(df.groupby('Survived')['Age'].mean())
 
 print("\n🛳️ Top 5 Embarkation Ports:")
 print(df['Embarked'].value_counts().head(5))
+
+
+
+summary = df.describe()
+summary.to_excel("titanic_summary.xlsx")
+print("\n📁 Summary exported to titanic_summary.xlsx")
